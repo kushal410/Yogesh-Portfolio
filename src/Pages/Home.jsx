@@ -1,7 +1,7 @@
 import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { ExternalLink, Github, Instagram, Linkedin, Mail, Sparkles } from "lucide-react"
+import { ExternalLink, Mail, Phone, Sparkles } from "lucide-react"
 import React, { memo, useCallback, useEffect, useState } from "react"
 
 // Memoized Components
@@ -12,7 +12,7 @@ const StatusBadge = memo(() => (
       <div className="relative px-3 sm:px-4 py-2 rounded-full bg-black/40 backdrop-blur-xl border border-white/10">
         <span className="bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-transparent bg-clip-text sm:text-sm text-[0.7rem] font-medium flex items-center">
           <Sparkles className="sm:w-4 sm:h-4 w-3 h-3 mr-2 text-blue-400" />
-          Ready to Innovate
+          Ready to Scale Performance
         </span>
       </div>
     </div>
@@ -25,14 +25,14 @@ const MainTitle = memo(() => (
       <span className="relative inline-block">
         <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20"></span>
         <span className="relative bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-          Fullstack
+          Paid Digital
         </span>
       </span>
       <br />
       <span className="relative inline-block mt-2">
         <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20"></span>
         <span className="relative bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">
-          Developer
+          Marketing
         </span>
       </span>
     </h1>
@@ -77,12 +77,11 @@ const SocialLink = memo(({ icon: Icon, link }) => (
 const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
-const WORDS = ["SOFTWARE ENGINEER VIP", "Tech Enthusiast"];
-const TECH_STACK = ["React", "Javascript", "Node.js", "Tailwind"];
+const WORDS = ["Paid Media Specialist", "Google Ads • Meta Ads • TikTok Ads"];
+const TECH_STACK = ["Google Ads", "Meta Ads", "TikTok Ads", "ROAS & CPA Optimization"];
 const SOCIAL_LINKS = [
-  { icon: Github, link: "https://github.com/kushal410" },
-  { icon: Linkedin, link: "https://www.linkedin.com/in/kushal-niraula-368594287/" },
-  { icon: Instagram, link: "https://www.instagram.com/kushal_vip/" }
+  { icon: Mail, link: "mailto:yogeshparajuly@gmail.com" },
+  { icon: Phone, link: "tel:+9779824066408" }
 ];
 
 const Home = () => {
@@ -173,20 +172,9 @@ const Home = () => {
 
                 {/* Typing Effect */}
                 <div className="h-8 flex items-center" data-aos="fade-up" data-aos-delay="800">
-                  {WORDS[wordIndex] === "SOFTWARE ENGINEER VIP" ? (
-  <a
-    href="https://www.kushaln.com.np"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-xl md:text-2xl bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent font-light underline hover:text-white transition"
-  >
-    {text}
-  </a>
-) : (
-  <span className="text-xl md:text-2xl bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent font-light">
-    {text}
-  </span>
-)}
+                  <span className="text-xl md:text-2xl bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent font-light">
+                    {text}
+                  </span>
 
                   <span className="w-[3px] h-6 bg-gradient-to-t from-[#6366f1] to-[#a855f7] ml-1 animate-blink"></span>
                 </div>
@@ -195,7 +183,7 @@ const Home = () => {
                 <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
                   data-aos="fade-up"
                   data-aos-delay="1000">
-                  Creating Innovative, Functional, and User-Friendly Websites for Digital Solutions.
+                  Results-driven Paid Digital Marketing Specialist focused on full-funnel campaign strategy, creative testing, and conversion optimization to grow ROAS and reduce CPA.
                 </p>
 
                 {/* Tech Stack */}
@@ -207,7 +195,7 @@ const Home = () => {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-row gap-3 w-full justify-start" data-aos="fade-up" data-aos-delay="1400">
-                  <CTAButton href="#Portofolio" text="Projects" icon={ExternalLink} />
+                  <CTAButton href="#Portofolio" text="Expertise" icon={ExternalLink} />
                   <CTAButton href="#Contact" text="Contact" icon={Mail} />
                 </div>
 

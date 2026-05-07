@@ -1,98 +1,83 @@
-import React, { useState } from "react";
+import React from "react";
+import { BarChart3, Megaphone, Target, TrendingUp, Users } from "lucide-react";
 
-// Project data
-const projects = [
+const expertise = [
   {
-    title: "Login Validation",
-    imgSrc: "Login.png",
-    link: "https://github.com/kushal410",
-    tags: ["nodejs", "modular", "typescript"],
-    category: "website",
-    description: "A simple login validation project using Node.js and Modular architecture.",
-    details: "This project allows users to test login functionality with input validation on the server-side using Node.js.",
+    title: "Google Ads",
+    icon: TrendingUp,
+    description: "Search, Performance Max (PMax), Display, Shopping — with structured asset groups and keyword strategy.",
+    highlights: ["Keyword research & match types", "Budget planning & management", "ROAS / CPA optimization"],
   },
   {
-    title: "Amazon clone",
-    imgSrc: "Amazon clone.png",
-    link: "https://hungry-shockley-0bea14.netlify.app/",
-    tags: ["React", "frontend", "Website"],
-    category: "website",
-    description: "A fully functional Amazon clone built with React.",
-    details: "This project mimics the UI and UX of Amazon's website, allowing users to browse products and add them to a shopping cart.",
+    title: "Meta Ads (Facebook & Instagram)",
+    icon: Users,
+    description: "Awareness, traffic, lead generation, and conversion campaigns with precise audience segmentation.",
+    highlights: ["Audience targeting & segmentation", "Creative testing & iteration", "Full-funnel optimization"],
   },
   {
-    title: "Expensetracker",
-    imgSrc: "Expensetracker.png",
-    link: "https://expense-tracker-29e8jeyz4-kushalniraulaprojects.vercel.app/",
-    tags: ["NEXTjs / Typescript", "Nodejs", "WebApp"],
-    category: "webapp",
-    description: "An expense tracking web application built using Next.js and Node.js.",
-    details: "Track your expenses, set budgets, and review spending patterns with this easy-to-use web app.",
+    title: "TikTok Ads",
+    icon: Megaphone,
+    description: "In-Feed Ads and Spark Ads focused on brand reach, engagement, and conversion intent.",
+    highlights: ["Creative hooks & ad scripting", "Spark Ads setup", "Performance monitoring"],
   },
   {
-    title: "TicTacToe Game",
-    imgSrc: "Tictactoe.png",
-    link: "https://tic.kushaln.com.np/",
-    tags: ["HTML&CSS", "JavaScript", "Game"],
-    category: "game",
-    description: "A simple Tic-Tac-Toe game built with HTML, CSS, and JavaScript.",
-    details: "Play Tic-Tac-Toe against the computer or another player with this fun game built using vanilla JavaScript.",
+    title: "Reporting & Analysis",
+    icon: BarChart3,
+    description: "Weekly/monthly reporting with CTR, CPC, ROAS, conversions, and budget utilization insights.",
+    highlights: ["Insight-driven reporting", "Troubleshooting delivery/billing issues", "Scaling winners, retiring losers"],
   },
   {
-    title: "GPA checker",
-    imgSrc: "Gpa-checker.png",
-    link: "https://kushaln.github.io/GPA-checker/",
-    tags: ["HTML&CSS", "JavaScript", "App"],
-    category: "website",
-    description: "A GPA checker tool built with HTML, CSS, and JavaScript.",
-    details: "Calculate your GPA based on the grades and credits entered in this GPA checker app.",
-  },
-  {
-    title: "To do list",
-    imgSrc: "mytodolist.png",
-    link: "https://github.com/kushal410/TODO",
-    tags: ["HTML&CSS", "JavaScript", "Web App"],
-    category: "webapp",
-    description: "A simple to-do list web app built using HTML, CSS, and JavaScript.",
-    details: "Add, edit, and delete tasks with this simple to-do list app. It's a perfect project for beginners in JavaScript.",
+    title: "Copy & Creative Strategy",
+    icon: Target,
+    description: "High-converting ad copy tailored to platform formats and audience psychology.",
+    highlights: ["Headlines, descriptions, hooks", "Creative briefs & alignment", "A/B testing mindset"],
   },
 ];
 
-// Portfolio component
+const ExpertiseCard = ({ item }) => {
+  const Icon = item.icon;
+
+  return (
+    <div
+      className="relative group rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 transition-all duration-300 hover:border-white/20 hover:shadow-2xl hover:shadow-[#6366f1]/10"
+      data-aos="fade-up"
+    >
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500 bg-gradient-to-r from-[#6366f1] to-[#a855f7]" />
+
+      <div className="relative flex items-start gap-4">
+        <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+          <Icon className="w-6 h-6 text-[#a855f7]" />
+        </div>
+
+        <div className="min-w-0">
+          <h4 className="text-lg font-bold text-white">{item.title}</h4>
+          <p className="mt-1 text-sm text-gray-300 leading-relaxed">{item.description}</p>
+
+          <ul className="mt-4 space-y-2">
+            {item.highlights.map((h) => (
+              <li key={h} className="text-sm text-gray-400">
+                • {h}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Portofolio = () => {
-  const [filter, setFilter] = useState("all");
-
-  const handleFilterClick = (category) => {
-    setFilter(category);
-  };
-
-  // Filter projects based on category
-  const filteredProjects =
-    filter === "all" ? projects : projects.filter((project) => project.category === filter);
-
   return (
     <section id="Portofolio" className="portofolio">
       <div className="heading text-center pt-5">
-        <small>Creative Work</small>
-        <h3>Check My Portfolio</h3>
-      </div>
-
-      <div id="myBtnContainer" className="text-center mt-4">
-        {["all", "game", "webapp", "website", "brand"].map((category) => (
-          <button
-            key={category}
-            className="filter-item"
-            onClick={() => handleFilterClick(category)}
-          >
-            {category.charAt(0).toUpperCase() + category.slice(1)}
-          </button>
-        ))}
+        <small>What I Do</small>
+        <h3>Paid Media Expertise</h3>
       </div>
 
       <div className="portofolio-body">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
-          {filteredProjects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
+          {expertise.map((item) => (
+            <ExpertiseCard key={item.title} item={item} />
           ))}
         </div>
       </div>
@@ -100,45 +85,5 @@ const Portofolio = () => {
   );
 };
 
-// ProjectCard component
-const ProjectCard = ({ project }) => {
-  return (
-    <div
-      className={`relative group post col-md-4 ${project.category} all col-10 mt-3 mt-md-0`}
-      data-aos="fade-up" id="Portofolio"
-    >
-      <div className="absolute inset-0 bg-[#2a3b50] group-hover:bg-[#192039] rounded-xl transition-colors duration-300 -z-50"></div>
-      <div className="card bg-[#192039] rounded-lg shadow-lg overflow-hidden">
-        <a href={project.link}>
-          <img
-            src={project.imgSrc}
-            className="card-img-top w-full h-64 object-cover rounded-md p-2" // Adjusted padding here
-            alt={project.title}
-          />
-        </a>
-        <div className="card-body text-center p-4 text-gray-300">
-          <h4 className="card-title font-bold text-white">{project.title}</h4>
-          <p className="text-sm mb-4">{project.description}</p>
-          {project.tags.map((tag, index) => (
-            <span key={index} className="badge bg-secondary badge-pill mr-2">
-              {tag}
-            </span>
-          ))}
-          <div className="flex justify-between mt-4">
-            <a
-              href={project.link}
-              className="text-blue-500 font-bold hover:text-blue-700"
-            >
-              Live Demo
-            </a>
-            <div className="text-gray-100 font-bold" style={{ color: "#3a4c68" }}>
-              Details
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 export default Portofolio;
+

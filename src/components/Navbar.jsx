@@ -81,12 +81,12 @@ const Navbar = () => {
                 {/* Logo */}
                 <div className="flex-shrink-0">
                    <a
-    href="https://www.kushaln.com.np"
+    href="https://www.parajuliyogesh.com.np"
     target="_blank"
     rel="noopener noreferrer"
     className="text-xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent"
 >
-    kushal
+    Yogesh
 </a>
 
                 </div>

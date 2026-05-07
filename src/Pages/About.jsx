@@ -4,7 +4,7 @@ import { ArrowUpRight, Award, Code, FileText, Globe, Sparkles } from "lucide-rea
 import React, { memo, useEffect, useMemo } from "react";
 
 // Memoized Components
-const DownloadCv="https://drive.google.com/file/d/1TPgfEDc0jrVUm0wnI1MpPXtB5xm3mtkV/view?usp=drive_link";
+const PRIMARY_EMAIL = "yogeshparajuly@gmail.com";
 const Header = memo(() => (
   <div className="text-center lg:mb-8 mb-2 px-[5%]">
     <div className="inline-block relative group">
@@ -22,7 +22,7 @@ const Header = memo(() => (
       data-aos-duration="800"
     >
       <Sparkles className="w-5 h-5 text-purple-400" />
-      Transforming ideas into digital experiences
+      Driving growth with performance marketing
       <Sparkles className="w-5 h-5 text-purple-400" />
     </p>
   </div>
@@ -114,19 +114,32 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
 ));
 
 const AboutPage = () => {
-  // Memoized calculations
-  const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
-    const startDate = new Date("2024-09-07");
-    const today = new Date();
-    const experience = today.getFullYear() - startDate.getFullYear() - 
-      (today < new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate()) ? 1 : 0);
-
-    return {
-      totalProjects: 5, // Set a static number or update accordingly
-      totalCertificates: 3, // Set a static number or update accordingly
-      YearExperience: experience
-    };
-  }, []);
+  const statsData = useMemo(() => [
+    {
+      icon: Globe,
+      color: "from-[#6366f1] to-[#a855f7]",
+      value: "2+",
+      label: "Years Experience",
+      description: "Hands-on paid media execution",
+      animation: "fade-right",
+    },
+    {
+      icon: Code,
+      color: "from-[#a855f7] to-[#6366f1]",
+      value: 3,
+      label: "Ad Platforms",
+      description: "Google, Meta, TikTok",
+      animation: "fade-up",
+    },
+    {
+      icon: Award,
+      color: "from-[#6366f1] to-[#a855f7]",
+      value: 4,
+      label: "Certifications",
+      description: "Marketing + Excel",
+      animation: "fade-left",
+    },
+  ], []);
 
   // Optimized AOS initialization
   useEffect(() => {
@@ -152,34 +165,6 @@ const AboutPage = () => {
     };
   }, []);
 
-  // Memoized stats data
-  const statsData = useMemo(() => [
-    {
-      icon: Code,
-      color: "from-[#6366f1] to-[#a855f7]",
-      value: totalProjects,
-      label: "Total Projects",
-      description: "Innovative web solutions crafted",
-      animation: "fade-right",
-    },
-    {
-      icon: Award,
-      color: "from-[#a855f7] to-[#6366f1]",
-      value: totalCertificates,
-      label: "Certificates",
-      description: "Professional skills validated",
-      animation: "fade-up",
-    },
-    {
-      icon: Globe,
-      color: "from-[#6366f1] to-[#a855f7]",
-      value: YearExperience,
-      label: "Years of Experience",
-      description: "Continuous learning journey",
-      animation: "fade-left",
-    },
-  ], [totalProjects, totalCertificates, YearExperience]);
-
   return (
     <div
       className="h-auto pb-[10%] text-white overflow-hidden px-[5%] sm:px-[5%] lg:px-[10%] mt-10 sm-mt-0" 
@@ -203,7 +188,7 @@ const AboutPage = () => {
                 data-aos="fade-right"
                 data-aos-duration="1300"
               >
-                Kushal Niraula
+                Yogesh Parajuli
               </span>
             </h2>
             
@@ -212,17 +197,17 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-              I am a Software Engineer interested in Front-End development. I focus on creating engaging digital experiences and always strive to provide the best solutions for each project.
+              Results-driven Paid Digital Marketing Specialist with 2+ years of experience managing performance campaigns across Google Ads, Meta (Facebook & Instagram), and TikTok Ads. Focused on ROAS growth, CPA reduction, and insight-driven reporting.
             </p>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
-              <a href={DownloadCv} className="w-full lg:w-auto">
+              <a href={`mailto:${PRIMARY_EMAIL}`} className="w-full lg:w-auto">
                 <button 
                   data-aos="fade-up"
                   data-aos-duration="800"
                   className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 shadow-lg hover:shadow-xl animate-bounce-slow"
                 >
-                  <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
+                  <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Email Me
                 </button>
               </a>
               <a href="#Portofolio" className="w-full lg:w-auto">
@@ -231,7 +216,7 @@ const AboutPage = () => {
                   data-aos-duration="1000"
                   className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg border border-[#a855f7]/50 text-[#a855f7] font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 hover:bg-[#a855f7]/10 animate-bounce-slow delay-200"
                 >
-                  <Code className="w-4 h-4 sm:w-5 sm:h-5" /> View Projects
+                  <Code className="w-4 h-4 sm:w-5 sm:h-5" /> View Expertise
                 </button>
               </a>
             </div>
