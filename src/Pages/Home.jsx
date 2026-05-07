@@ -1,7 +1,7 @@
 import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { ExternalLink, Mail, Phone, Sparkles } from "lucide-react"
+import { ExternalLink, Facebook, Instagram, Mail, Phone, Sparkles } from "lucide-react"
 import React, { memo, useCallback, useEffect, useState } from "react"
 
 // Memoized Components
@@ -81,7 +81,9 @@ const WORDS = ["Paid Media Specialist", "Google Ads • Meta Ads • TikTok Ads"
 const TECH_STACK = ["Google Ads", "Meta Ads", "TikTok Ads", "ROAS & CPA Optimization"];
 const SOCIAL_LINKS = [
   { icon: Mail, link: "mailto:yogeshparajuly@gmail.com" },
-  { icon: Phone, link: "tel:+9779824066408" }
+  { icon: Phone, link: "tel:+9779824066408" },
+  { icon: Facebook, link: "https://www.facebook.com/yogesh.parajuli.94" },
+  { icon: Instagram, link: "https://www.instagram.com/yogeshparajuli7/" }
 ];
 
 const Home = () => {

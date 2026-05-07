@@ -1,4 +1,4 @@
-import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
+import { ExternalLink, Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import React from "react";
 
 const CONTACT_LINKS = [
@@ -29,6 +29,24 @@ const CONTACT_LINKS = [
     url: "https://www.google.com/maps/search/?api=1&query=Jhapa%2C%20Nepal",
     color: "#60a5fa",
     gradient: "from-[#3b82f6] to-[#60a5fa]",
+  },
+  {
+    name: "Facebook",
+    displayName: "Facebook",
+    subText: "yogesh.parajuli.94",
+    icon: Facebook,
+    url: "https://www.facebook.com/yogesh.parajuli.94",
+    color: "#1877F2",
+    gradient: "from-[#1877F2] to-[#0A66C2]",
+  },
+  {
+    name: "Instagram",
+    displayName: "Instagram",
+    subText: "@yogeshparajuli7",
+    icon: Instagram,
+    url: "https://www.instagram.com/yogeshparajuli7/",
+    color: "#E4405F",
+    gradient: "from-[#833AB4] via-[#E4405F] to-[#FCAF45]",
   },
 ];
 
@@ -134,4 +152,3 @@ const SocialLinks = () => {
 };
 
 export default SocialLinks;
-
