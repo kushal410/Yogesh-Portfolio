@@ -56,10 +56,11 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
     });
 
     const timer = setTimeout(() => {
+      // Immediately tell the parent to show the main site content.
+      // The parent unmounts this component, avoiding a blank screen
+      // state if this component finishes loading but remains mounted.
+      onLoadingComplete?.();
       setIsLoading(false);
-      setTimeout(() => {
-        onLoadingComplete?.();
-      }, 1000);
     }, 4000);
     
     return () => clearTimeout(timer);
