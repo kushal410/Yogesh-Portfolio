@@ -4,7 +4,7 @@ import { ArrowUpRight, Award, Code, FileText, Globe, Sparkles } from "lucide-rea
 import React, { memo, useEffect, useMemo } from "react";
 
 // Memoized Components
-const DownloadCv="";
+const DownloadCv="https://drive.google.com/file/d/1TPgfEDc0jrVUm0wnI1MpPXtB5xm3mtkV/view?usp=drive_link";
 const Header = memo(() => (
   <div className="text-center lg:mb-8 mb-2 px-[5%]">
     <div className="inline-block relative group">
