@@ -197,7 +197,7 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-              Results-driven Paid Digital Marketing Specialist with 2+ years of experience managing performance campaigns across Google Ads, Meta (Facebook & Instagram), and TikTok Ads. Focused on ROAS growth, CPA reduction, and insight-driven reporting.
+              Results-driven Paid Digital Marketing Specialist with 3+ years of experience managing performance campaigns across Google Ads, Meta (Facebook & Instagram), and TikTok Ads. Focused on ROAS growth, CPA reduction, and insight-driven reporting.
             </p>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
