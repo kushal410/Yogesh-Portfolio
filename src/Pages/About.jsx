@@ -232,6 +232,64 @@ const AboutPage = () => {
             ))}
           </div>
         </a>
+
+        {/* Experience & Worked With */}
+        <div className="max-w-4xl mx-auto mt-12 mb-20" data-aos="fade-up" data-aos-duration="1000">
+          <h3 className="text-2xl font-semibold text-white/90 mb-4">Experience</h3>
+
+          <div className="space-y-4">
+            <div className="flex items-start gap-4">
+              <div className="text-sm text-purple-300 font-medium w-24">2024 - Now</div>
+              <div>
+                <a href="https://www.facebook.com/p/Convent-English-School-100063628643065/?ref=1" target="_blank" rel="noreferrer" className="text-white/90 hover:underline">
+                  Convent English School
+                </a>
+                <p className="text-sm text-gray-400">Part-time / Contract work — digital presence & marketing support</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="text-sm text-purple-300 font-medium w-24">2024 - 2025</div>
+              <div>
+                <a href="https://www.prolificcomputer.com.np/" target="_blank" rel="noreferrer" className="text-white/90 hover:underline">
+                  Prolific Computer
+                </a>
+                <p className="text-sm text-gray-400">Freelance projects — web development and campaign setup</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="text-sm text-purple-300 font-medium w-24">2024 - 2025</div>
+              <div>
+                <a href="https://hotstonelondon.com/" target="_blank" rel="noreferrer" className="text-white/90 hover:underline">
+                  Hotstone London
+                </a>
+                <p className="text-sm text-gray-400">E‑commerce & site optimizations</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="text-sm text-purple-300 font-medium w-24">2024 - 2025</div>
+              <div>
+                <a href="https://jiwantech.com/" target="_blank" rel="noreferrer" className="text-white/90 hover:underline">
+                  JIWAN Tech
+                </a>
+                <p className="text-sm text-gray-400">Development & technical collaboration</p>
+              </div>
+            </div>
+          </div>
+
+          <h4 className="text-lg font-medium text-white/90 mt-8 mb-3">Worked With</h4>
+          <div className="flex flex-wrap gap-3 items-center">
+            <a href="https://www.facebook.com/p/Convent-English-School-100063628643065/?ref=1" target="_blank" rel="noreferrer" className="text-sm text-gray-300 hover:text-white/90">Convent English School</a>
+            <span className="text-gray-600">•</span>
+            <a href="https://www.prolificcomputer.com.np/" target="_blank" rel="noreferrer" className="text-sm text-gray-300 hover:text-white/90">Prolific Computer</a>
+            <span className="text-gray-600">•</span>
+            <a href="https://hotstonelondon.com/" target="_blank" rel="noreferrer" className="text-sm text-gray-300 hover:text-white/90">Hotstone London</a>
+            <span className="text-gray-600">•</span>
+            <a href="https://jiwantech.com/" target="_blank" rel="noreferrer" className="text-sm text-gray-300 hover:text-white/90">JIWAN Tech</a>
+          </div>
+        </div>
       </div>
 
       <style jsx>{`
