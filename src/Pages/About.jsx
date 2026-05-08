@@ -118,7 +118,7 @@ const AboutPage = () => {
     {
       icon: Globe,
       color: "from-[#6366f1] to-[#a855f7]",
-      value: "2+",
+      value: "3+",
       label: "Years Experience",
       description: "Hands-on paid media execution",
       animation: "fade-right",
