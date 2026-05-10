@@ -5,7 +5,7 @@ Welcome to my portfolio website repository.
 
 ## About Me
 
-Hi, I'm **Yogesh Parajuli**, a **Paid Digital Marketing Specialist** with 2+ years of hands-on experience managing performance campaigns across **Google Ads**, **Meta Ads (Facebook & Instagram)**, and **TikTok Ads**. I focus on full-funnel strategy, creative testing, audience targeting, and conversion-driven optimization to improve **ROAS** and reduce **CPA**.
+Hi, I'm **Yogesh Parajuli**, a **Paid Digital Marketing Specialist** with 3+ years of hands-on experience managing performance campaigns across **Google Ads**, **Meta Ads (Facebook & Instagram)**, and **TikTok Ads**. I focus on full-funnel strategy, creative testing, audience targeting, and conversion-driven optimization to improve **ROAS** and reduce **CPA**.
 
 ## What You’ll Find in This Portfolio
 
