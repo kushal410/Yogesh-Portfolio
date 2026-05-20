@@ -1,4 +1,4 @@
-import { ExternalLink, Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { ExternalLink, Facebook, Instagram, Mail, MapPin, Phone, MessageSquare } from "lucide-react";
 import React from "react";
 
 const CONTACT_LINKS = [
@@ -19,6 +19,15 @@ const CONTACT_LINKS = [
     icon: Phone,
     url: "tel:+9779824066408",
     color: "#22c55e",
+    gradient: "from-[#16a34a] to-[#22c55e]",
+  },
+  {
+    name: "WhatsApp",
+    displayName: "WhatsApp",
+    subText: "Chat: 9824066408",
+    icon: MessageSquare,
+    url: "https://wa.me/9779824066408",
+    color: "#25D366",
     gradient: "from-[#16a34a] to-[#22c55e]",
   },
   {
